@@ -13,8 +13,10 @@ Visualizations for different sorting algorithms.
 
 ## Screenshots
 
-![randomized array](https://github.com/anukuljoshi/sort-visualizer-v2/blob/main/screenshots/main.png)
+![main](https://github.com/anukuljoshi/sort-visualizer-v2/blob/main/screenshots/full.png)
 
 ![bubble](https://github.com/anukuljoshi/sort-visualizer-v2/blob/main/screenshots/bubble.png)
 
 ![merge](https://github.com/anukuljoshi/sort-visualizer-v2/blob/main/screenshots/merge.png)
+
+![sorted](https://github.com/anukuljoshi/sort-visualizer-v2/blob/main/screenshots/sorted.png)
