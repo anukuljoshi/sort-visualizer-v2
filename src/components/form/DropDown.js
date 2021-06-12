@@ -8,7 +8,7 @@ function DropDown(props) {
     const DropDownList = valueList.map((val, index) => {
         return (
             <li 
-                className="w-44 bg-blue-700 hover:bg-gray-900 px-3 py-1 cursor-pointer flex items-center"
+                className="bg-blue-700 hover:bg-gray-900 px-3 py-1 cursor-pointer flex items-center"
                 onClick={
                     () => {
                         setValue(val[0], val[1]);
@@ -23,20 +23,18 @@ function DropDown(props) {
     })
 
     return (        
-        <div>
+        <div className="w-full relative">
             <div 
-                className="w-44 bg-blue-700 px-3 py-1 cursor-pointer flex justify-between items-center"
-                onMouseEnter={() => setDropdown(true)}
-                onMouseLeave={() => setDropdown(false)}
+                className="w-full bg-blue-700 px-3 py-1 cursor-pointer flex justify-between"
+				onClick={() => setDropdown(!dropdown)}
             >
-                {value} <i className="fa fa-angle-down ml-2 text-xl"></i>
+                <span>{value}</span> <span className="font-bold transform rotate-180">^</span>
             </div>
-            <div 
-                onMouseEnter={() => setDropdown(true)}
-                onMouseLeave={() => setDropdown(false)}
-                className={`absolute ${(dropdown) ? '' : 'hidden'}`}>
-                { DropDownList }
-            </div>
+			<div 
+				onClick={() => setDropdown(!dropdown)}
+				className={`${(dropdown) ? '' : 'hidden'} absolute w-full`}>
+				{ DropDownList }
+			</div>
         </div>
     )
 }
